@@ -11,7 +11,7 @@ if __name__ == '__main__':
     for line in sys.stdin:
 
         key, val = line.split("\t")
-        val = int(val)
+        val = float(val)
 
         if key == curkey:
             if val > varMaximo:
@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
         else:
             if curkey is not None:
-                sys.stdout.write("{}\t{}\n".format(curkey, total))
+                sys.stdout.write("{}\t{}\n".format(curkey, varMaximo, varMinimo))
 
             curkey = key
             varMaximo = val
