@@ -4,6 +4,8 @@
 import sys
 
 if __name__ == "__main__":
+
     for line in sys.stdin:
-        data = line.split("   ")
-        sys.stdout.write("{},{},{}\n".format(data[2].strip().zfill(4),data[0].strip(),data[1].strip()))
+        data = line.strip()
+        data = line.split()
+        sys.stdout.write("{},{},{}\n".format(data[0], data[1], data[2]))

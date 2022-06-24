@@ -8,10 +8,10 @@ if __name__ == "__main__":
     lista = []
 
     for line in sys.stdin:
-        key, variableUno, variableDos = line.split(",")
-        variableDos = int(variableDos)
+        key, var_uno, var_dos = line.split(",")
+        var_dos = int(var_dos)
 
-        lista.append((key, variableUno, variableDos))
+        lista.append((key, var_uno, var_dos))
 
         lista.sort(key=lambda x: x[2], reverse=False)
 
